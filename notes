@@ -19,7 +19,7 @@ Packing Items
 :trip_id - integer
 :item - string
 
-rails g resource PackingItem trip_id:integer item:string
+rails g resource PackingItem trip_id:integer item:string --no-test-framework
 
 Itinerary Items
     belongs_to :trip
@@ -27,4 +27,4 @@ Itinerary Items
 :trip_id - integer
 :description - string
 
-rails g resource ItineraryItem trip_id:integer description:string
+rails g resource ItineraryItem trip_id:integer description:string --no-test-framework
