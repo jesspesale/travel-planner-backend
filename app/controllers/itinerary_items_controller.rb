@@ -1,0 +1,2 @@
+class ItineraryItemsController < ApplicationController
+end
