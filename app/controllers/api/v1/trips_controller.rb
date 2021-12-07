@@ -7,6 +7,7 @@ class Api::V1::TripsController < ApplicationController
     end
 
     def create
+        # binding.pry
         @trip = Trip.new(trip_params)
         if @trip.save
             render json: @trip

@@ -15,5 +15,9 @@ trip2 = Trip.create(destination: "Florida", start_date: "2021-12-14", end_date: 
 sunscreen = PackingItem.create(trip_id: 2, item: "sunscreen")
 
 # Trip.destroy_all
+# PackingItem.destroy_all
+# ItineraryItem.destroy_all
+
+# rake db:reset
 
 # can run rake db: drop  ->  rake db:migrate  ->  rake db:seed again
