@@ -10,7 +10,8 @@ class Api::V1::PackingItemsController < ApplicationController
     def create
         @packing_item = @trip.packing_items.build(packing_item_params)
         # @packing_item = @trip.packing_items.new(packing_item_params)
-        render json: @packing_item
+        @packing_item.save
+        render json: @trip
     end
 
     def show 
@@ -20,8 +21,11 @@ class Api::V1::PackingItemsController < ApplicationController
     end
 
     def destroy 
-        @packing_item = @trip.packing_items.find_by(id: params[:id])
-        @packing_item.destroy
+        packing_item = @trip.packing_items.find_by(id: params[:id])
+        packing_item.destroy
+        trip2 = Trip.find(packing_item.trip_id)
+        binding.pry
+        render json: trip2
     end
 
 
