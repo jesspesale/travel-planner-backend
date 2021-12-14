@@ -27,6 +27,18 @@ class Api::V1::TripsController < ApplicationController
         @trip.destroy
     end
 
+    def update
+        # binding.pry
+        @trip = Trip.find(params[:id])
+        if params[:start_date] == "" && params[:end_date] == ""
+            @trip.update(destination: params[:destination])
+        else
+            @trip.update(trip_params)
+        end
+            @trip.save
+            render json: @trip
+    end
+
 
     private
 

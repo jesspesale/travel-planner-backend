@@ -24,7 +24,7 @@ class Api::V1::PackingItemsController < ApplicationController
         packing_item = @trip.packing_items.find_by(id: params[:id])
         packing_item.destroy
         trip2 = Trip.find(packing_item.trip_id)
-        binding.pry
+        # binding.pry
         render json: trip2
     end
 
