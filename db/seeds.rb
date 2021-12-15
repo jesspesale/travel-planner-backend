@@ -20,4 +20,4 @@ sunscreen = PackingItem.create(trip_id: 2, item: "sunscreen")
 
 # rake db:reset
 
-# can run rake db: drop  ->  rake db:migrate  ->  rake db:seed again
+# can run rake db:drop  ->  rake db:migrate  ->  rake db:seed 
