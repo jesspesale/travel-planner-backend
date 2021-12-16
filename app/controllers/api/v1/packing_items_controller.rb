@@ -32,6 +32,7 @@ class Api::V1::PackingItemsController < ApplicationController
     private
 
     def find_trip
+        # binding.pry
         @trip = Trip.find(params[:trip_id])
     end
 
