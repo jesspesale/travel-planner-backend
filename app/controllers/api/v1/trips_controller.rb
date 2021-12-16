@@ -7,7 +7,6 @@ class Api::V1::TripsController < ApplicationController
     end
 
     def create
-        # binding.pry
         @trip = Trip.new(trip_params)
         if @trip.save
             render json: @trip
@@ -28,15 +27,17 @@ class Api::V1::TripsController < ApplicationController
     end
 
     def update
-        # binding.pry
+        binding.pry
         @trip = Trip.find(params[:id])
-        if params[:start_date] == "" && params[:end_date] == ""
-            @trip.update(destination: params[:destination])
-        else
-            @trip.update(trip_params)
-        end
-            @trip.save
-            render json: @trip
+        @trip.update(trip_params)
+        @trip.save
+        # if params[:start_date] == "" && params[:end_date] == ""
+        #     @trip.update(destination: params[:destination])
+        # else
+        #     @trip.update(trip_params)
+        # end
+        #     @trip.save
+        render json: @trip
     end
 
 
