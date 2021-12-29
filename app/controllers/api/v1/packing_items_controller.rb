@@ -8,8 +8,8 @@ class Api::V1::PackingItemsController < ApplicationController
     end
 
     def create
+        # binding.pry
         @packing_item = @trip.packing_items.build(packing_item_params)
-        # @packing_item = @trip.packing_items.new(packing_item_params)
         @packing_item.save
         render json: @trip
     end
@@ -24,15 +24,12 @@ class Api::V1::PackingItemsController < ApplicationController
         packing_item = @trip.packing_items.find_by(id: params[:id])
         packing_item.destroy
         trip2 = Trip.find(packing_item.trip_id)
-        # binding.pry
         render json: trip2
     end
-
 
     private
 
     def find_trip
-        # binding.pry
         @trip = Trip.find(params[:trip_id])
     end
 
