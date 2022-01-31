@@ -17,9 +17,9 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: myapp_development
+  database: travel-planner
   pool: 5
-  username: brenden
+  username: postgres
   password:
   timeout: 5000
  
