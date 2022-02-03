@@ -8,6 +8,7 @@ class Api::V1::ItineraryItemsController < ApplicationController
     end
 
     def create
+        # binding.pry
         @itinerary_item = @trip.itinerary_items.build(itinerary_item_params)
         @itinerary_item.save
         # @itinerary_item = @trip.itinerary_items.new(itinerary_item_params)
