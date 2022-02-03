@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  root 'welcome#index'
+  
 namespace :api do
     namespace :v1 do
       resources :trips do
@@ -11,8 +13,3 @@ namespace :api do
   end
 end
 
-
-
-# fetch('http://localhost::3000')
-# fetch('http://localhost::3000/api/v1/trips')
-# fetch('http://localhost::3000/api/v1/trips/1/packing_items')
