@@ -49,6 +49,6 @@ test:
   encoding: unicode
   database: travel-planner
   pool: 5
-  username: postgrew
+  username: postgres
   password:
   timeout: 5000

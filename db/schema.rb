@@ -12,22 +12,25 @@
 
 ActiveRecord::Schema.define(version: 2021_11_30_161608) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "itinerary_items", force: :cascade do |t|
     t.integer "trip_id"
-    t.string "description"
+    t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "packing_items", force: :cascade do |t|
     t.integer "trip_id"
-    t.string "item"
+    t.text "item"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "trips", force: :cascade do |t|
-    t.string "destination"
+    t.text "destination"
     t.date "start_date"
     t.date "end_date"
     t.datetime "created_at", precision: 6, null: false
