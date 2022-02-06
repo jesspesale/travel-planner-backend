@@ -1,27 +1,17 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
+Please few projects frontend README for full app description.
 
 Frontend: https://github.com/jesspesale/travel-planner-frontend
 
+Or view the live site here:
+
+Live site: https://travel-plannerr.netlify.app/
+
 Things you may want to cover:
 
-* Ruby version
+# App Details
+ This app has full CRUD functionality allowing you to create, read, update and delete any trip plus create and delete and list items you create (packing and itinerary).
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This app has a Rails backend - you can find the github for it (here).
+The frontend was created with React, Redux and uses Thunk.
