@@ -1,6 +1,6 @@
 # README
 
-Please few projects frontend README for full app description.
+Please see the projects frontend README for full app description.
 
 Frontend: https://github.com/jesspesale/travel-planner-frontend
 
